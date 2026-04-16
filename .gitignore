@@ -1,0 +1,25 @@
+docs/.ignore/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Playwright
+test-results/
+playwright-report/
+.auth/
+
+# IDE
+.vscode/
+.idea/
