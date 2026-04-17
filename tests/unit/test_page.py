@@ -1,4 +1,5 @@
 from unittest.mock import MagicMock
+from pages.base_page import BasePage
 from pages.login_page import LoginPage
 from pages.secure_area_page import SecureAreaPage
 import pytest
@@ -37,3 +38,13 @@ def test_logout_calls_with_click(mock_page):
     secure_area_page.logout()
     # Assert
     mock_page.click.assert_called_with(SecureAreaPage.LOGOUT_BUTTON)
+    
+def test_navigate_calls_goto(mocker):
+    # Arrange
+    # mock_goto = mocker.patch("pages.base_page.Page")
+    mock_goto = mocker.MagicMock()
+    base_page = BasePage(mock_goto)
+    # Act
+    base_page.navigate("https://the-internet.herokuapp.com/login")
+    # Assert
+    mock_goto.goto.assert_called_with("https://the-internet.herokuapp.com/login")
