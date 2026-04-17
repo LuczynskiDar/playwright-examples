@@ -1,7 +1,7 @@
 import pytest
 from pages.login_page import LoginPage
 from pages.secure_area_page import SecureAreaPage   
-
+from unittest.mock import MagicMock
 
 @pytest.fixture(scope="session")
 def browser_context_args(browser_context_args):
@@ -18,3 +18,7 @@ def login_page(page):
 @pytest.fixture
 def secure_area_page(page):
     return SecureAreaPage(page)
+
+@pytest.fixture
+def mock_page():
+    return MagicMock()
