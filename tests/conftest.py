@@ -18,7 +18,3 @@ def login_page(page):
 @pytest.fixture
 def secure_area_page(page):
     return SecureAreaPage(page)
-
-@pytest.fixture
-def mock_page():
-    return MagicMock()

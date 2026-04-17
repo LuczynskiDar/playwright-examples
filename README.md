@@ -68,3 +68,8 @@ pages/
   base_page.py      # BasePage class — inherited by all page objects
   __init__.py
 ```
+
+```
+  pytest tests/unit/ -m smoke -v      # smoke only
+  pytest tests/unit/ -m "not smoke" -v  # all others
+```
