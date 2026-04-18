@@ -1,4 +1,5 @@
 import pytest
+from pages.checkboxes_page import CheckboxesPage
 from pages.login_page import LoginPage
 from pages.secure_area_page import SecureAreaPage   
 from unittest.mock import MagicMock
@@ -18,3 +19,8 @@ def login_page(page):
 @pytest.fixture
 def secure_area_page(page):
     return SecureAreaPage(page)
+
+
+@pytest.fixture
+def checkboxes_page(page):
+    return CheckboxesPage(page)
