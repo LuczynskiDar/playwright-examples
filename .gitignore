@@ -23,3 +23,6 @@ playwright-report/
 # IDE
 .vscode/
 .idea/
+
+# Local data files
+.data/

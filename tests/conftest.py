@@ -10,6 +10,7 @@ from pages.secure_area_page import SecureAreaPage
 from unittest.mock import MagicMock
 
 from pages.tables_page import TablesPage
+from pages.upload_page import UploadPage
 
 @pytest.fixture(scope="session")
 def browser_context_args(browser_context_args):
@@ -57,3 +58,9 @@ def iframe_page(page):
 @pytest.fixture
 def hovers_page(page):
     return HooversPage(page)
+
+
+@pytest.fixture
+def upload_page(page):
+    return UploadPage(page)
+
