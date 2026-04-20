@@ -3,6 +3,7 @@ from pages.alerts_page import AlertsPage
 from pages.checkboxes_page import CheckboxesPage
 from pages.drag_drop_page import DragDropPage
 from pages.dropdown_page import DropdownPage
+from pages.iframe_page import IframePage
 from pages.login_page import LoginPage
 from pages.secure_area_page import SecureAreaPage   
 from unittest.mock import MagicMock
@@ -46,3 +47,7 @@ def alerts_page(page):
 @pytest.fixture
 def drag_drop_page(page):
     return DragDropPage(page)
+
+@pytest.fixture
+def iframe_page(page):
+    return IframePage(page)
