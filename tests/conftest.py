@@ -3,6 +3,7 @@ from pages.alerts_page import AlertsPage
 from pages.checkboxes_page import CheckboxesPage
 from pages.drag_drop_page import DragDropPage
 from pages.dropdown_page import DropdownPage
+from pages.hovers_page import HooversPage
 from pages.iframe_page import IframePage
 from pages.login_page import LoginPage
 from pages.secure_area_page import SecureAreaPage   
@@ -51,3 +52,8 @@ def drag_drop_page(page):
 @pytest.fixture
 def iframe_page(page):
     return IframePage(page)
+
+
+@pytest.fixture
+def hovers_page(page):
+    return HooversPage(page)
