@@ -11,7 +11,6 @@ class IframePage(BasePage):
     def clear_and_type(self, text: str):
         frame = self.get_frame()
         element = frame.locator(self.ELEMENT_LOCATOR)
-        element.fill("")
         element.fill(text)
     
     def get_content(self) -> str:
