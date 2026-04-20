@@ -1,5 +1,7 @@
 import pytest
+from pages.alerts_page import AlertsPage
 from pages.checkboxes_page import CheckboxesPage
+from pages.drag_drop_page import DragDropPage
 from pages.dropdown_page import DropdownPage
 from pages.login_page import LoginPage
 from pages.secure_area_page import SecureAreaPage   
@@ -35,3 +37,12 @@ def dropdown_page(page):
 @pytest.fixture
 def tables_page(page):
     return TablesPage(page)
+
+@pytest.fixture
+def alerts_page(page):
+    return AlertsPage(page)
+
+
+@pytest.fixture
+def drag_drop_page(page):
+    return DragDropPage(page)
