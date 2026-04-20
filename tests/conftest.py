@@ -1,6 +1,7 @@
 import pytest
 from pages.alerts_page import AlertsPage
 from pages.checkboxes_page import CheckboxesPage
+from pages.download_page import DownloadPage
 from pages.drag_drop_page import DragDropPage
 from pages.dropdown_page import DropdownPage
 from pages.hovers_page import HooversPage
@@ -64,3 +65,6 @@ def hovers_page(page):
 def upload_page(page):
     return UploadPage(page)
 
+@pytest.fixture
+def download_page(page):
+    return DownloadPage(page)
