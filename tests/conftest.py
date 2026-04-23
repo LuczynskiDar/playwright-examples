@@ -1,5 +1,6 @@
 import pytest
 from pages.alerts_page import AlertsPage
+from pages.basic_auth_page import BasicAuthPage
 from pages.checkboxes_page import CheckboxesPage
 from pages.download_page import DownloadPage
 from pages.drag_drop_page import DragDropPage
@@ -68,3 +69,7 @@ def upload_page(page):
 @pytest.fixture
 def download_page(page):
     return DownloadPage(page)
+
+@pytest.fixture
+def basicauth_page(page):
+    return BasicAuthPage(page)
