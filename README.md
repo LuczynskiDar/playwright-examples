@@ -69,6 +69,25 @@ pages/
   __init__.py
 ```
 
+## Completed exercises
+
+| # | Topic | Test file |
+|---|---|---|
+| 1 | Login (valid / invalid) | `tests/e2e/test_login.py` |
+| 2 | Logout | `tests/e2e/test_logout.py` |
+| 3 | Checkboxes | `tests/e2e/test_checkboxes.py` |
+| 4 | Dropdown | `tests/e2e/test_dropdown.py` |
+| 5 | Tables | `tests/e2e/test_tables.py` |
+| 6 | JavaScript alerts | `tests/e2e/test_alerts.py` |
+| 7 | Drag and drop | `tests/e2e/test_drag_drop.py` |
+| 8 | iFrame | `tests/e2e/test_iframe.py` |
+| 9 | Hovers | `tests/e2e/test_hovers.py` |
+| 10 | File upload | `tests/e2e/test_upload_file.py` |
+| 11 | File download | `tests/e2e/test_download.py` |
+| 12 | Basic auth | `tests/e2e/test_basic_auth.py` |
+
+---
+
 ## Running modules
 
 ```
