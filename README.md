@@ -69,6 +69,8 @@ pages/
   __init__.py
 ```
 
+## Running modules
+
 ```
   pytest tests/unit/ -m smoke -v      # smoke only
   pytest tests/unit/ -m "not smoke" -v  # all others
