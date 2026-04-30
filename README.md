@@ -15,6 +15,7 @@ python -m pip install --upgrade pip
 ```
 
 Activate:
+
 - **Windows (bash/Git Bash):** `source .venv/Scripts/activate`
 - **Windows (CMD):** `.venv\Scripts\activate.bat`
 - **Windows (PowerShell):** `.venv\Scripts\Activate.ps1`
@@ -34,6 +35,7 @@ playwright install chromium
 ```
 
 Install all browsers if needed:
+
 ```bash
 playwright install
 ```

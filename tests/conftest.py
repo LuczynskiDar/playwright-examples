@@ -1,4 +1,6 @@
 import pytest
+from pages.account_created_page import AccountCreatedPage
+from pages.account_details_page import AccountDetailsPage
 from pages.alerts_page import AlertsPage
 from pages.basic_auth_page import BasicAuthPage
 from pages.checkboxes_page import CheckboxesPage
@@ -11,6 +13,7 @@ from pages.login_page import LoginPage
 from pages.secure_area_page import SecureAreaPage   
 from unittest.mock import MagicMock
 
+from pages.signup_page import SignupPage
 from pages.tables_page import TablesPage
 from pages.upload_page import UploadPage
 
@@ -73,3 +76,15 @@ def download_page(page):
 @pytest.fixture
 def basicauth_page(page):
     return BasicAuthPage(page)
+
+@pytest.fixture
+def signup_page(page):
+    return SignupPage(page)
+
+@pytest.fixture
+def account_details_page(page):
+    return AccountDetailsPage(page)
+
+@pytest.fixture
+def account_created_page(page):
+    return AccountCreatedPage(page)
