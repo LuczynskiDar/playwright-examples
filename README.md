@@ -103,12 +103,13 @@ pages/
 | 1 | Signup — full registration flow | `tests/e2e/test_signup_page.py` |
 | 2 | Login | `tests/e2e/test_login_ae.py` |
 | 3 | Delete account | `tests/e2e/test_delete_account.py` |
+| 4 | Contact Us — form, file upload, dialog | `tests/e2e/test_contact_us.py` |
 
 ---
 
 ## Running modules
 
-```
+```bash
   pytest tests/unit/ -m smoke -v      # smoke only
   pytest tests/unit/ -m "not smoke" -v  # all others
 ```

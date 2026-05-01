@@ -21,6 +21,8 @@ class SignupPage(BasePage):
 
     DELETE_ACCOUNT ='a[href="/delete_account"]'
     
+    CONTACT_US = 'a[href="/contact_us"]'
+    
     def __init__(self, page):
         super().__init__(page)
         self.name = f"test_{uuid.uuid4().hex[:8]}"
@@ -34,6 +36,10 @@ class SignupPage(BasePage):
     
     def navbar_login(self):
         self.page.click(self.SIGNUP_LOCATOR)
+        return self.email
+    
+    def navbar_contact_us(self):
+        self.page.click(self.CONTACT_US)
         
     def signup(self, name: str, email: str):
         self.page.fill(self.SIGNUP_NAME_LOCATOR, name) 

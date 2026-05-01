@@ -4,6 +4,7 @@ from pages.account_details_page import AccountDetailsPage
 from pages.alerts_page import AlertsPage
 from pages.basic_auth_page import BasicAuthPage
 from pages.checkboxes_page import CheckboxesPage
+from pages.contact_us_page import ContactUsPage
 from pages.delete_account_page import DeleteAccountPage
 from pages.download_page import DownloadPage
 from pages.drag_drop_page import DragDropPage
@@ -93,3 +94,7 @@ def account_created_page(page):
 @pytest.fixture
 def delete_account_page(page):
     return DeleteAccountPage(page)
+
+@pytest.fixture
+def contact_us_page(page):
+    return ContactUsPage(page)
