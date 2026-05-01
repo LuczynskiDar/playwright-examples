@@ -18,11 +18,19 @@ class SignupPage(BasePage):
     
     LOGOUT_LOCATOR = 'a[href="/logout"]'
     LOGGED_USER_LOCATOR = 'a:has-text("Logged in as") b'
-          
+
+    DELETE_ACCOUNT ='a[href="/delete_account"]'
+    
     def __init__(self, page):
         super().__init__(page)
         self.name = f"test_{uuid.uuid4().hex[:8]}"
         self.email = f"{self.name}@test.com"
+           
+    def get_name(self) -> str:
+        return self.name
+    
+    def get_email(self) -> str:
+        return self.email
     
     def navbar_login(self):
         self.page.click(self.SIGNUP_LOCATOR)
@@ -47,9 +55,6 @@ class SignupPage(BasePage):
     
     def check_logged_as(self) -> str:
         return self.page.locator(self.LOGGED_USER_LOCATOR).inner_text().strip()
-           
-    def get_name(self) -> str:
-        return self.name
     
-    def get_email(self) -> str:
-        return self.email
+    def delete_account(self):
+        self.page.click(self.DELETE_ACCOUNT)
