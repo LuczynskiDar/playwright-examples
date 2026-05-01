@@ -15,6 +15,9 @@ class SignupPage(BasePage):
     BUTTON_SIGNUP = 'button[type="submit"][data-qa="signup-button"]'
        
     COOKIE_ACCEPT = 'button.fc-button.fc-cta-consent'
+    
+    LOGOUT_LOCATOR = 'a[href="/logout"]'
+    LOGGED_USER_LOCATOR = 'a:has-text("Logged in as") b'
           
     def __init__(self, page):
         super().__init__(page)
@@ -38,7 +41,13 @@ class SignupPage(BasePage):
         consent = self.page.locator(self.COOKIE_ACCEPT)
         if consent.is_visible():
             consent.click()
-          
+    
+    def is_logout_exists(self) -> bool:
+        return self.page.locator(self.LOGOUT_LOCATOR).is_visible()
+    
+    def check_logged_as(self) -> str:
+        return self.page.locator(self.LOGGED_USER_LOCATOR).inner_text().strip()
+           
     def get_name(self) -> str:
         return self.name
     

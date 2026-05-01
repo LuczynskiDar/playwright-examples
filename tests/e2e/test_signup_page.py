@@ -38,3 +38,9 @@ def test_signup_page(signup_page, account_details_page, account_created_page, de
     account_details_page.fill_form(**details)
     
     assert account_created_page.get_success() == 'ACCOUNT CREATED!'
+    
+    account_created_page.continue_button()
+    
+    assert signup_page.is_logout_exists()
+    assert signup_page.check_logged_as() == signup_page.get_name()
+    
