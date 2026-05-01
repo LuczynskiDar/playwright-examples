@@ -73,6 +73,8 @@ pages/
 
 ## Completed exercises
 
+### The Internet (herokuapp.com)
+
 | # | Topic | Test file |
 |---|---|---|
 | 1 | Login (valid / invalid) | `tests/e2e/test_login.py` |
@@ -87,6 +89,20 @@ pages/
 | 10 | File upload | `tests/e2e/test_upload_file.py` |
 | 11 | File download | `tests/e2e/test_download.py` |
 | 12 | Basic auth | `tests/e2e/test_basic_auth.py` |
+
+### Unit tests (pytest + mock)
+
+| # | Topic | Test file |
+|---|---|---|
+| 1 | Markers, parametrize, mocking — login/logout/navigate | `tests/unit/test_page.py` |
+
+### Automation Exercise (automationexercise.com)
+
+| # | Topic | Test file |
+|---|---|---|
+| 1 | Signup — full registration flow | `tests/e2e/test_signup_page.py` |
+| 2 | Login | `tests/e2e/test_login_ae.py` |
+| 3 | Delete account | `tests/e2e/test_delete_account.py` |
 
 ---
 
