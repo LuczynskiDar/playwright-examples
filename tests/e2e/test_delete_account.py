@@ -40,8 +40,6 @@ def test_signup_page(signup_page, account_details_page, account_created_page, de
     
     assert signup_page.is_logout_exists()
     assert signup_page.check_logged_as() == signup_page.get_name()
-    assert signup_page.is_logout_exists()
-    assert signup_page.check_logged_as() == details['name']
     signup_page.delete_account()
     assert delete_account_page.delete_account_confirmation()
     delete_account_page.continue_button()
