@@ -32,8 +32,8 @@ class SignupPage(BasePage):
         self.page.fill(self.SIGNUP_EMAIL_LOCATOR, email)
         self.page.click(self.BUTTON_SIGNUP)   
      
-    def login(self, username: str, password: str):
-        self.page.fill(self.LOGIN_EMAIL_LOCATOR, username)
+    def login(self, email: str, password: str):
+        self.page.fill(self.LOGIN_EMAIL_LOCATOR, email)
         self.page.fill(self.LOGIN_PASSWORD_LOCATOR, password)
         self.page.click(self.BUTTON_LOGIN)
     
