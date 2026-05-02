@@ -1,8 +1,12 @@
+from collections import namedtuple
+
 from base_page import BasePage
 import uuid
 
+from pages import PageRole
+
 class SignupPage(BasePage):
-    
+       
     SIGNUP_LOCATOR = ".nav.navbar-nav a[href='/login']"
     # page.get_by_role("link", name="Signup / Login")
     
@@ -22,7 +26,9 @@ class SignupPage(BasePage):
     DELETE_ACCOUNT ='a[href="/delete_account"]'
     
     CONTACT_US = 'a[href="/contact_us"]'
-    
+    PRODUCTS = 'a[href="/products"]'
+    PRODUCTS_ROLE = PageRole(role='link', name="Products")
+  
     def __init__(self, page):
         super().__init__(page)
         self.name = f"test_{uuid.uuid4().hex[:8]}"
@@ -40,7 +46,10 @@ class SignupPage(BasePage):
     
     def navbar_contact_us(self):
         self.page.click(self.CONTACT_US)
-        
+    
+    def navbar_products(self):
+        self.page.get_by_role(self.PRODUCTS_ROLE.role, name=self.PRODUCTS_ROLE.name).click()
+    
     def signup(self, name: str, email: str):
         self.page.fill(self.SIGNUP_NAME_LOCATOR, name) 
         self.page.fill(self.SIGNUP_EMAIL_LOCATOR, email)

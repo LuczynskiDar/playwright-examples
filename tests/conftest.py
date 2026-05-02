@@ -12,6 +12,8 @@ from pages.dropdown_page import DropdownPage
 from pages.hovers_page import HooversPage
 from pages.iframe_page import IframePage
 from pages.login_page import LoginPage
+from pages.product_details_page import ProductDetailsPage
+from pages.products_page import ProductsPage
 from pages.secure_area_page import SecureAreaPage   
 from unittest.mock import MagicMock
 
@@ -98,3 +100,12 @@ def delete_account_page(page):
 @pytest.fixture
 def contact_us_page(page):
     return ContactUsPage(page)
+
+@pytest.fixture
+def products_page(page):
+    return ProductsPage(page)
+
+@pytest.fixture
+def product_details_page(page):
+    return ProductDetailsPage(page)
+
