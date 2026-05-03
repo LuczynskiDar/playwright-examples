@@ -104,6 +104,7 @@ pages/
 | 2 | Login | `tests/e2e/test_login_ae.py` |
 | 3 | Delete account | `tests/e2e/test_delete_account.py` |
 | 4 | Contact Us — form, file upload, dialog | `tests/e2e/test_contact_us.py` |
+| 5 | Products — list, search, product details | `tests/e2e/test_products.py` |
 
 ---
 
